@@ -1,0 +1,6 @@
+{
+  "name": "Maison Noir - Fine Dining & Luxury Restaurant",
+  "description": "Where Taste Meets Elegance. An extraordinary fine-dining experience featuring exquisite culinary artistry, bespoke wine pairings, and luxury table reservations.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

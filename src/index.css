@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Cormorant Garamond', Garamond, Georgia, serif;
+    --font-brand: 'Cinzel', serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #070707;
+    color: #FAF6F0;
+    letter-spacing: -0.01em;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-serif);
+  }
+}
+
+.font-brand {
+  font-family: var(--font-brand);
+}
+
+.font-editorial {
+  font-family: var(--font-serif);
+}
+
+/* Luxurious Champagne Gold Gradients */
+.gold-text-gradient {
+  background: linear-gradient(135deg, #F5E8C7 0%, #DFC283 45%, #C29B48 80%, #EAD7AC 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-border-gradient {
+  border-image: linear-gradient(to right, rgba(212, 175, 55, 0.1), rgba(223, 194, 131, 0.5), rgba(212, 175, 55, 0.1)) 1;
+}
+
+/* Luxury Card Shimmer & Subtle Elevation */
+.luxury-card {
+  background: #0E0D0B;
+  border: 1px solid rgba(223, 194, 131, 0.12);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.luxury-card:hover {
+  border-color: rgba(223, 194, 131, 0.35);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.8), 0 0 20px rgba(212, 175, 55, 0.06);
+}
+
+/* Subtle luxury button shimmer */
+.luxury-gold-btn {
+  background: linear-gradient(135deg, #EAD7AC 0%, #DFC283 50%, #B89047 100%);
+  color: #0A0A0A;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.luxury-gold-btn:hover {
+  filter: brightness(1.08);
+  box-shadow: 0 4px 25px rgba(223, 194, 131, 0.32);
+}
+
+/* Custom inputs for reservation */
+.luxury-input {
+  background-color: #0A0A09;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #FAF6F0;
+  transition: all 0.25s ease;
+}
+
+.luxury-input:focus {
+  outline: none;
+  border-color: #DFC283;
+  box-shadow: 0 0 0 1px rgba(223, 194, 131, 0.35);
+}
+
+/* Hairline dividers */
+.gold-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(223, 194, 131, 0.4), transparent);
+}
+
+/* Refined custom scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #070707;
+}
+::-webkit-scrollbar-thumb {
+  background: #23211D;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #DFC283;
+}
