@@ -1,5 +1,12 @@
 import { MenuItem, ChefSpecial, GalleryItem } from '../types/restaurant';
-
+import wagyuImage from '../assets/images/dish_wagyu_truffle_1793523870166.jpg';
+import seaBassImage from '../assets/images/dish_sea_bass_caviar_1793523870378.jpg';
+import chocolateImage from '../assets/images/dish_chocolate_sphere_1793523871468.jpg';
+import scallopImage from '../assets/images/dish_scallop_crudo_1793523960523.jpg';
+import cocktailImage from '../assets/images/cocktail_smoked_old_fashioned_1793523962207.jpg';
+import wineCellarImage from '../assets/images/gallery_wine_cellar_1793523873162.jpg';
+import privateSalonImage from '../assets/images/gallery_private_salon_1793523962160.jpg';
+import heroDiningImage from '../assets/images/hero_dining_room_1793523870201.jpg';
 export const RESTAURANT_INFO = {
   name: 'MAISON NOIR',
   tagline: 'Where Taste Meets Elegance',
@@ -35,7 +42,7 @@ export const CHEF_SPECIALS: ChefSpecial[] = [
     winePairing: 'Château Margaux Premier Grand Cru Classé 2015',
     origin: 'Miyazaki, Kyushu, Japan',
     price: 195,
-    image: '/src/assets/images/dish_wagyu_truffle_1793523870166.jpg',
+    image: wagyuImage,
   },
   {
     id: 'special-seabass',
@@ -47,7 +54,7 @@ export const CHEF_SPECIALS: ChefSpecial[] = [
     winePairing: 'Domaine Leflaive Puligny-Montrachet 1er Cru 2019',
     origin: 'Southeastern Pacific & Caspian Coast',
     price: 165,
-    image: '/src/assets/images/dish_sea_bass_caviar_1793523870378.jpg',
+    image: seaBassImage,
   },
   {
     id: 'special-chocolate',
@@ -59,7 +66,7 @@ export const CHEF_SPECIALS: ChefSpecial[] = [
     winePairing: 'Château d’Yquem Sauternes 2011 or Vintage Port 2003',
     origin: 'Tain-l’Hermitage, France & Piedmont, Italy',
     price: 52,
-    image: '/src/assets/images/dish_chocolate_sphere_1793523871468.jpg',
+    image: chocolateImage,
   },
 ];
 
@@ -73,7 +80,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description:
       'Sashimi-grade sea scallops thinly carved, infused with white Alba truffle droplets, Australian finger lime pearls, baby shiso, and crystalline sea salt.',
     price: 48,
-    image: '/src/assets/images/dish_scallop_crudo_1793523960523.jpg',
+    image: scallopImage,
     isChefSpecial: true,
     dietary: ['Gluten-Free', 'Pescatarian'],
     winePairing: 'Krug Grande Cuvée 171ème Édition Champagne',
@@ -87,7 +94,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description:
       'Caramelized duck liver accompanied by spiced Mission fig compote, aged balsamic reduction, Sichuan pepper dust, and warm artisanal brioche feuilletée.',
     price: 54,
-    image: '/src/assets/images/dish_wagyu_truffle_1793523870166.jpg',
+    image: wagyuImage,
     dietary: ['Signature Classic'],
     winePairing: 'Château Guiraud Sauternes 1er Grand Cru 2016',
   },
@@ -99,7 +106,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description:
       'Slow-simmered coral reduction with poached lobster claw medallion, tarragon oil droplets, and Hennessy XO emulsion poured tableside.',
     price: 46,
-    image: '/src/assets/images/dish_sea_bass_caviar_1793523870378.jpg',
+    image: seaBassImage,
     dietary: ['Pescatarian'],
     winePairing: 'Louis Jadot Meursault 2020',
   },
@@ -113,7 +120,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description:
       'Prime Japanese A5 striploin, charred shallot puree, pomme purée robuchon, Périgord black winter truffle, and 24-karat gold leaf.',
     price: 195,
-    image: '/src/assets/images/dish_wagyu_truffle_1793523870166.jpg',
+    image: wagyuImage,
     isChefSpecial: true,
     dietary: ['Gluten-Free'],
     winePairing: 'Tenuta San Guido Sassicaia Bolgheri 2018',
@@ -126,7 +133,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description:
       'Slow-roasted Patagonian toothfish, saffron fumet, sea asparagus, pickled baby fennel, and Royal Oscietra caviar.',
     price: 165,
-    image: '/src/assets/images/dish_sea_bass_caviar_1793523870378.jpg',
+    image: seaBassImage,
     isChefSpecial: true,
     dietary: ['Gluten-Free', 'Pescatarian'],
     winePairing: 'Domaine Dujac Morey-Saint-Denis Blanc 2021',
@@ -139,7 +146,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description:
       'Lavender-glazed breast with crisp skin, heirloom baby beets, sunchoke mousseline, and sour Morello cherry reduction.',
     price: 120,
-    image: '/src/assets/images/dish_wagyu_truffle_1793523870166.jpg',
+    image: wagyuImage,
     dietary: ['Gluten-Free'],
     winePairing: 'Domaine Armand Rousseau Gevrey-Chambertin 2017',
   },
@@ -153,7 +160,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description:
       'Bittersweet Valrhona dark chocolate shell, roasted hazelnut crunch, vanilla fleur de sel gelato, and hot salted butter caramel pour.',
     price: 52,
-    image: '/src/assets/images/dish_chocolate_sphere_1793523871468.jpg',
+    image: chocolateImage,
     isChefSpecial: true,
     dietary: ['Vegetarian'],
     winePairing: 'Taylor Fladgate 30 Year Tawny Port',
@@ -166,7 +173,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description:
       'Airy hot soufflé infused with double-strength bourbon vanilla pods, Grand Marnier mist, and warm spun sugar nest.',
     price: 42,
-    image: '/src/assets/images/dish_chocolate_sphere_1793523871468.jpg',
+    image: chocolateImage,
     dietary: ['Vegetarian'],
     winePairing: 'Château Suduiraut Sauternes 2015',
   },
@@ -180,7 +187,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description:
       '20-Year Pappy Van Winkle reserve bourbon, black truffle-infused Demerara syrup, smoked Angostura bitters, flamed orange peel, tableside French oak decanting.',
     price: 65,
-    image: '/src/assets/images/cocktail_smoked_old_fashioned_1793523962207.jpg',
+    image: cocktailImage,
     isChefSpecial: true,
     dietary: ['Craft Cocktail'],
     winePairing: 'Signature House Creation',
@@ -193,7 +200,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description:
       'Tasting pour of Dom Pérignon 2013, Cristal Roederer 2014, and Salon Blanc de Blancs Le Mesnil 2008 with pairing caviar bites.',
     price: 185,
-    image: '/src/assets/images/gallery_wine_cellar_1793523873162.jpg',
+    image: wineCellarImage,
     dietary: ['Cellar Reserve'],
     winePairing: 'Curated by Master Sommelier',
   },
@@ -205,7 +212,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     title: 'The Grand Dining Salon',
     category: 'interior',
     categoryLabel: 'The Dining Room',
-    image: '/src/assets/images/hero_dining_room_1793523870201.jpg',
+    image: heroDiningImage,
     description: 'Intimate candlelit dining salon surrounded by charcoal wainscoting and brass chandeliers.',
   },
   {
@@ -213,7 +220,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     title: 'The Subterranean Wine Cellar',
     category: 'cellar',
     categoryLabel: 'Wine Cellar',
-    image: '/src/assets/images/gallery_wine_cellar_1793523873162.jpg',
+    image: wineCellarImage,
     description: 'Over 4,500 references of rare vintages, Grand Crus, and champagne reserves with sommelier tasting lounge.',
   },
   {
@@ -221,7 +228,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     title: 'Salon Impérial Private Dining',
     category: 'private',
     categoryLabel: 'Private Salon',
-    image: '/src/assets/images/gallery_private_salon_1793523962160.jpg',
+    image: privateSalonImage,
     description: 'An exclusive sanctuary accommodating up to 12 guests with dedicated Maître d’ and private culinary service.',
   },
   {
@@ -229,7 +236,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     title: 'A5 Miyazaki Wagyu Craft',
     category: 'culinary',
     categoryLabel: 'Culinary Art',
-    image: '/src/assets/images/dish_wagyu_truffle_1793523870166.jpg',
+    image: wagyuImage,
     description: 'Precision carving of Japanese A5 Miyazaki beef adorned with 24k gold leaf and black winter truffle.',
   },
   {
@@ -237,7 +244,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     title: 'The Sommelier Bar & Mixology',
     category: 'interior',
     categoryLabel: 'The Bar',
-    image: '/src/assets/images/cocktail_smoked_old_fashioned_1793523962207.jpg',
+    image: cocktailImage ,
     description: 'Artisanal cocktails crafted with century-old spirits and botanical aromatics.',
   },
   {
@@ -245,7 +252,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     title: 'The Golden Valrhona Sphere',
     category: 'culinary',
     categoryLabel: 'Culinary Art',
-    image: '/src/assets/images/dish_chocolate_sphere_1793523871468.jpg',
+    image: chocolateImage,
     description: 'Hand-sculpted chocolate sphere melted table-side with warm Madagascar caramel.',
   },
 ];
