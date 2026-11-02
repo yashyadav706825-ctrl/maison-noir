@@ -31,10 +31,10 @@ export const Hero: React.FC<HeroProps> = ({ onExploreMenu, onReserveTable }) => 
         {/* Editorial Subtitle / Heritage Kicker */}
         <div className="flex items-center gap-3 mb-6">
           <span className="w-8 md:w-12 h-[1px] bg-[#DFC283]/60" />
-          <span className="text-[11px] md:text-xs font-semibold uppercase tracking-[0.35em] text-[#DFC283]">
-            Fine Dining & Wine Cellar
+          <span className="text-[11px] md:text-xs font-semibold uppercase tracking-[0.35em] text-[#F2D89B]">
+            Fine Dining & Wine Cellartext
           </span>
-          <span className="w-8 md:w-12 h-[1px] bg-[#DFC283]/60" />
+          <span className="w-8 md:w-12 h-[1px] bg-bg-[#F2D89B]/80" />
         </div>
 
         {/* Main Editorial Headline */}
@@ -44,7 +44,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreMenu, onReserveTable }) => 
         </h1>
 
         {/* Brand Tagline in Warm Ivory & Gold */}
-        <p className="text-xs sm:text-sm md:text-base font-medium tracking-[0.3em] uppercase text-[#DFC283]/90 mb-5">
+        <p className="text-xs sm:text-sm md:text-base font-medium tracking-[0.3em] uppercase text-[#F2D89B] mb-5">
           Where Taste Meets Elegance
         </p>
 
