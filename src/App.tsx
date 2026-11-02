@@ -86,18 +86,18 @@ export default function App() {
           onReserveTable={scrollToReservation}
         />
 
-        {/* 4. Chef's Special Dishes (Placed prominently for immediate culinary intrigue) */}
-        <ChefSpecialsSection
-          onReserveItem={handleReserveItem}
-          onViewImage={handleViewImage}
-        />
-
         {/* 3. Signature Food Menu with Images and Prices */}
-        <MenuSection
-          onReserveItem={handleReserveItem}
-          onOpenDegustationModal={() => setDegustationOpen(true)}
-          onViewImage={handleViewImage}
-        />
+<MenuSection
+  onReserveItem={handleReserveItem}
+  onOpenDegustationModal={() => setDegustationOpen(true)}
+  onViewImage={handleViewImage}
+/>
+
+{/* 4. Chef's Special Dishes */}
+<ChefSpecialsSection
+  onReserveItem={handleReserveItem}
+  onViewImage={handleViewImage}
+/>
 
         {/* 5. Luxury Restaurant Gallery */}
         <GallerySection
