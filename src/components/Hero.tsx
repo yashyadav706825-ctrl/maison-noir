@@ -30,11 +30,11 @@ export const Hero: React.FC<HeroProps> = ({ onExploreMenu, onReserveTable }) => 
       <div className="relative z-10 max-w-5xl mx-auto px-6 md:px-12 text-center flex flex-col items-center">
         {/* Editorial Subtitle / Heritage Kicker */}
         <div className="flex items-center gap-3 mb-6">
-          <span className="w-8 md:w-12 h-[1px] bg-[#DFC283]/60" />
+          <span className="w-8 md:w-12 h-[1px] bg-[#F2D89B]/80" />
           <span className="text-[11px] md:text-xs font-semibold uppercase tracking-[0.35em] text-[#F2D89B]">
-            Fine Dining & Wine Cellartext
+           Fine Dining & Wine Cellar 
           </span>
-          <span className="w-8 md:w-12 h-[1px] bg-bg-[#F2D89B]/80" />
+          <span className="w-8 md:w-12 h-[1px] bg-[#F2D89B]/80" />
         </div>
 
         {/* Main Editorial Headline */}
