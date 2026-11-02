@@ -1,4 +1,5 @@
 import React from 'react';
+import heroImage from '../assets/images/hero_dining_room_1793523870201.jpg';
 import { Calendar, UtensilsCrossed, ChevronDown } from 'lucide-react';
 
 interface HeroProps {
@@ -12,7 +13,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreMenu, onReserveTable }) => 
       {/* Visually Stunning Full-Width Restaurant Photography Background */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/src/assets/images/hero_dining_room_1793523870201.jpg"
+          src={heroImage}
           alt="Maison Noir Luxury Dining Room"
           className="w-full h-full object-cover object-center scale-100 filter brightness-[0.58] contrast-[1.12] transition-transform duration-1000 ease-out"
           referrerPolicy="no-referrer"
