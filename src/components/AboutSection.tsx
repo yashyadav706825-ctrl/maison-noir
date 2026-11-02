@@ -1,4 +1,5 @@
 import React from 'react';
+import wineCellarImage from '../assets/images/gallery_wine_cellar_1793523873162.jpg';
 import { Wine, BookOpen, Flame, Compass } from 'lucide-react';
 
 interface AboutSectionProps {
@@ -45,7 +46,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
             <div className="relative z-10 p-2.5 bg-[#0D0D0B] border border-[#DFC283]/25 shadow-[0_20px_50px_rgba(0,0,0,0.9)] group">
               <div className="relative overflow-hidden h-[460px] md:h-[540px]">
                 <img
-                  src="/src/assets/images/gallery_wine_cellar_1793523873162.jpg"
+                  src={wineCellarImage}
                   alt="Maison Noir Sommelier Cellar & Private Tasting Room"
                   className="w-full h-full object-cover filter contrast-[1.06] brightness-95 transition-transform duration-700 ease-out group-hover:scale-105"
                   referrerPolicy="no-referrer"
