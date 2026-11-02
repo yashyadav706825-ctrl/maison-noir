@@ -104,14 +104,14 @@ export default function App() {
           onSelectImage={handleSelectGalleryItem}
         />
 
-        {/* 6. Table Reservation Form */}
-        <ReservationSection
-          preselectedDish={selectedDishForReservation}
-          onClearPreselectedDish={() => setSelectedDishForReservation(undefined)}
-        />
+        {/* 6. Contact Information and Opening Hours */}
+<ContactSection />
 
-        {/* 7. Contact Information and Opening Hours */}
-        <ContactSection />
+{/* 7. Table Reservation Form */}
+<ReservationSection
+  preselectedDish={selectedDishForReservation}
+  onClearPreselectedDish={() => setSelectedDishForReservation(undefined)}
+/>
       </main>
 
       {/* 8. Elegant Footer */}
