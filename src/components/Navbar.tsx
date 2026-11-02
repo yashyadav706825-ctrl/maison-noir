@@ -1,3 +1,5 @@
+
+
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 
@@ -8,12 +10,29 @@ interface NavbarProps {
 
 export const Navbar: React.FC<NavbarProps> = ({ onReserveClick, onMenuClick }) => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState('');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 30);
+
+      const sections = ['about', 'menu', 'specials', 'gallery', 'contact'];
+      let currentSection = '';
+
+      sections.forEach((id) => {
+        const element = document.getElementById(id);
+
+        if (element && element.getBoundingClientRect().top <= 160) {
+          currentSection = id;
+        }
+      });
+
+      setActiveSection(currentSection);
     };
+
+    handleScroll();
+
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -21,6 +40,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onReserveClick, onMenuClick }) =
   const scrollToSection = (id: string) => {
     setMobileMenuOpen(false);
     const element = document.getElementById(id);
+
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
@@ -35,7 +55,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onReserveClick, onMenuClick }) =
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between gap-8">
-        {/* Zone 1: Single text element wordmark */}
+
+        {/* Zone 1: Logo */}
         <a
           href="#"
           onClick={(e) => {
@@ -44,7 +65,6 @@ export const Navbar: React.FC<NavbarProps> = ({ onReserveClick, onMenuClick }) =
           }}
           className="group flex items-center gap-3 shrink-0"
         >
-          {/* Subtle architectural gold crest */}
           <div className="w-6 h-6 border border-[#DFC283]/40 rotate-45 flex items-center justify-center transition-transform duration-500 group-hover:rotate-90">
             <span className="-rotate-45 text-[9px] font-brand text-[#DFC283] font-semibold tracking-tighter">
               MN
@@ -55,44 +75,60 @@ export const Navbar: React.FC<NavbarProps> = ({ onReserveClick, onMenuClick }) =
           </span>
         </a>
 
-        {/* Zone 2: 4-5 clean single-line text navigation links */}
+        {/* Zone 2: Desktop Navigation */}
         <nav className="hidden lg:flex items-center gap-9 text-[11px] uppercase tracking-[0.22em] font-medium text-[#C8C2B7]">
+
           <button
             onClick={() => scrollToSection('about')}
-            className="hover:text-[#DFC283] transition-colors cursor-pointer whitespace-nowrap shrink-0 relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-[#DFC283] hover:after:w-full after:transition-all after:duration-300"
+            className={`relative py-1 ${
+              activeSection === 'about' ? 'text-[#F2D89B] after:w-full' : 'hover:text-[#DFC283] after:w-0'
+            } after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[1px] after:bg-[#F2D89B] after:transition-all after:duration-300`}
           >
             About
           </button>
+
           <button
             onClick={() => {
               scrollToSection('menu');
               onMenuClick();
             }}
-            className="hover:text-[#DFC283] transition-colors cursor-pointer whitespace-nowrap shrink-0 relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-[#DFC283] hover:after:w-full after:transition-all after:duration-300"
+            className={`relative py-1 ${
+              activeSection === 'menu' ? 'text-[#F2D89B] after:w-full' : 'hover:text-[#DFC283] after:w-0'
+            } after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[1px] after:bg-[#F2D89B] after:transition-all after:duration-300`}
           >
             Menu
           </button>
+
           <button
             onClick={() => scrollToSection('specials')}
-            className="hover:text-[#DFC283] transition-colors cursor-pointer whitespace-nowrap shrink-0 relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-[#DFC283] hover:after:w-full after:transition-all after:duration-300"
+            className={`relative py-1 ${
+              activeSection === 'specials' ? 'text-[#F2D89B] after:w-full' : 'hover:text-[#DFC283] after:w-0'
+            } after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[1px] after:bg-[#F2D89B] after:transition-all after:duration-300`}
           >
             Chef's Specials
           </button>
+
           <button
             onClick={() => scrollToSection('gallery')}
-            className="hover:text-[#DFC283] transition-colors cursor-pointer whitespace-nowrap shrink-0 relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-[#DFC283] hover:after:w-full after:transition-all after:duration-300"
+            className={`relative py-1 ${
+              activeSection === 'gallery' ? 'text-[#F2D89B] after:w-full' : 'hover:text-[#DFC283] after:w-0'
+            } after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[1px] after:bg-[#F2D89B] after:transition-all after:duration-300`}
           >
             Gallery
           </button>
+
           <button
             onClick={() => scrollToSection('contact')}
-            className="hover:text-[#DFC283] transition-colors cursor-pointer whitespace-nowrap shrink-0 relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-[#DFC283] hover:after:w-full after:transition-all after:duration-300"
+            className={`relative py-1 ${
+              activeSection === 'contact' ? 'text-[#F2D89B] after:w-full' : 'hover:text-[#DFC283] after:w-0'
+            } after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[1px] after:bg-[#F2D89B] after:transition-all after:duration-300`}
           >
             Hours & Contact
           </button>
+
         </nav>
 
-        {/* Zone 3: 1 primary action */}
+        {/* Zone 3: Reserve Button */}
         <div className="flex items-center gap-4 shrink-0">
           <button
             onClick={onReserveClick}
@@ -116,12 +152,14 @@ export const Navbar: React.FC<NavbarProps> = ({ onReserveClick, onMenuClick }) =
       {mobileMenuOpen && (
         <div className="lg:hidden bg-[#0A0A09]/98 border-b border-[#DFC283]/20 px-8 py-8 shadow-2xl backdrop-blur-xl animate-in slide-in-from-top-4 duration-300">
           <nav className="flex flex-col gap-5 text-xs uppercase tracking-[0.22em] text-[#C8C2B7]">
+
             <button
               onClick={() => scrollToSection('about')}
               className="text-left py-2 hover:text-[#DFC283] transition-colors border-b border-white/5"
             >
               About
             </button>
+
             <button
               onClick={() => {
                 scrollToSection('menu');
@@ -131,24 +169,28 @@ export const Navbar: React.FC<NavbarProps> = ({ onReserveClick, onMenuClick }) =
             >
               Menu
             </button>
+
             <button
               onClick={() => scrollToSection('specials')}
               className="text-left py-2 hover:text-[#DFC283] transition-colors border-b border-white/5"
             >
               Chef's Specials
             </button>
+
             <button
               onClick={() => scrollToSection('gallery')}
               className="text-left py-2 hover:text-[#DFC283] transition-colors border-b border-white/5"
             >
               Gallery
             </button>
+
             <button
               onClick={() => scrollToSection('contact')}
               className="text-left py-2 hover:text-[#DFC283] transition-colors border-b border-white/5"
             >
               Hours & Contact
             </button>
+
             <div className="pt-3">
               <button
                 onClick={() => {
